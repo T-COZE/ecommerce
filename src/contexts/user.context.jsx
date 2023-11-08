@@ -10,7 +10,7 @@ export const USER_ACTION_TYPES = {
   SET_CURRENT_USER: 'SET_CURRENT_USER'
 }
 
-const userReducder = (state, action) => {
+const userReducer = (state, action) => {
   const { type, payload} = action
 
   switch(type){
@@ -31,7 +31,7 @@ const INITIAL_STATE = {
 //the provider component wraps around any children you want to render
 export const UserProvider = ({ children }) => {
   // const [currentUser, setCurrentUser] = useState(null);
-  const [ {currentUser}, dispatch] = useReducer(userReducder, INITIAL_STATE)
+  const [ {currentUser}, dispatch] = useReducer(userReducer, INITIAL_STATE)
 
   const setCurrentUser = (user) =>{
     dispatch({type: USER_ACTION_TYPES.SET_CURRENT_USER, payload: user})
