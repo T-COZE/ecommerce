@@ -12,6 +12,6 @@ const Authentication = () => {
   );
 };
 
-//Where does this go to?
+
 
 export default Authentication;
